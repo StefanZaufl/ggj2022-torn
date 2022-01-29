@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -178,6 +178,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TestTileSet_Corner2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 62
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cf41528073c5a4998ae3b19badd921
+      internalID: 350555409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestTileSet_Side2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 62
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae38895b64d61ed428b66386d6fd4b8c
+      internalID: 1966352307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestTileSet_Middle2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 62
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfeb9646fb50c9d4e80cb5f453f58651
+      internalID: 1476599427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -190,7 +253,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       TestTileSet_Middle: 448272411
+      TestTileSet_Middle2: 1476599427
+      TestTileSet_Corner2: 350555409
       TestTileSet_Corner: 68700937
+      TestTileSet_Side2: 1966352307
       TestTileSet_Side: -924941336
   spritePackingTag: 
   pSDRemoveMatte: 0
