@@ -208,4 +208,9 @@ public class SpriteAnimator : MonoBehaviour {
         }
         transform.localPosition = localPos;
     }
+
+    public Vector2 LastGoodDirection
+    {
+        get { return m_LastGoodDirection; }
+    }
 }

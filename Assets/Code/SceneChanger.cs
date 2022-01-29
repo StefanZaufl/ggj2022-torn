@@ -12,10 +12,8 @@ public class SceneChanger : MonoBehaviour
 
 
     public void ChangeToLevelOne()
-    {   
-        // change this later
-        //SceneManager.LoadScene("SampleScene");
-        SceneManager.LoadScene("ChrisScene");
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 
 

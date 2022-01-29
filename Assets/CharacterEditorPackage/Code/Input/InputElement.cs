@@ -62,4 +62,17 @@ public class InputElement
             break;
         }
     }
+
+    public void setInputLocked(bool locked)
+    {
+        switch (m_InputType)
+        {
+            case InputType.Button:
+                GetButtonInput().SetOverride(locked);
+                break;
+            case InputType.Direction:
+                GetDirectionInput().SetOverride(locked);
+                break;
+        }
+    }
 }

@@ -160,4 +160,12 @@ public class PlayerInput : MonoBehaviour
             m_Inputs[i].FixedUpdate();
         }
     }
+
+    public void setInputLocked(bool locked)
+    {
+        for (int i = 0; i < m_Inputs.Length; i++)
+        {
+            m_Inputs[i].setInputLocked(locked);
+        }
+    }
 }
