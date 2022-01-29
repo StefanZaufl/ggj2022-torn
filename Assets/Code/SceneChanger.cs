@@ -13,13 +13,26 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeToLevelOne()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
+        FindObjectOfType<SoundManager>().StartMainTheme();
     }
 
 
     public void ChangeToCredit()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+
+    public void ChangeToWin()
+    {
+        SceneManager.LoadScene("Win");
+    }
+
+
+    public void ChangeToLoose()
+    {
+        SceneManager.LoadScene("Loose");
     }
 
 
