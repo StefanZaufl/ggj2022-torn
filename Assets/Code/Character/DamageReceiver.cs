@@ -28,6 +28,11 @@ public class DamageReceiver : MonoBehaviour
         }
     }
 
+    protected void init(DeathHandler deathHandler)
+    {
+        this.deathHandler = deathHandler;
+    }
+
     void Start()
     {
         deathHandler = GetComponent<DeathHandler>();
@@ -48,13 +53,23 @@ public class DamageReceiver : MonoBehaviour
                 StartCoroutine(handleInvincibility());
             }
 
-            Vector3 hitVector = transform.position - damageDealer.transform.position;
+            Vector3 otherPos;
+
+            if(damageDealer.DamageSource != null)
+            {
+                otherPos = damageDealer.DamageSource.transform.position;
+            } else
+            {
+                otherPos = damageDealer.transform.position;
+            }
+
+            Vector3 hitVector = transform.position - otherPos;
 
             onHit(hitVector.normalized);
         }
     }
 
-    protected void onHit(Vector3 hitForceNormalized)
+    protected virtual void onHit(Vector3 hitForceNormalized)
     {
         //Do nothing
     }
