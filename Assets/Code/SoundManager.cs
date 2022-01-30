@@ -259,22 +259,22 @@ public class SoundManager : MonoBehaviour
         /**
         delete this afterwards
         **/
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            // toggle main theme
-            ChangeMainTheme(actual_world_type == WorldType.LIGHT ? WorldType.DARK : WorldType.LIGHT);
-        }
+        // if (Input.GetKeyDown(KeyCode.F1))
+        // {
+        //     // toggle main theme
+        //     ChangeMainTheme(actual_world_type == WorldType.LIGHT ? WorldType.DARK : WorldType.LIGHT);
+        // }
 
-        // walk demo
-        if (Input.GetKey(KeyCode.F2))
-        {
-            PlayWalkSound();
-        }
+        // // walk demo
+        // if (Input.GetKey(KeyCode.F2))
+        // {
+        //     PlayWalkSound();
+        // }
 
-        // walk demo
-        if (Input.GetKey(KeyCode.F3))
-        {
-            PlayJumpSound();
-        }
+        // // walk demo
+        // if (Input.GetKey(KeyCode.F3))
+        // {
+        //     PlayJumpSound();
+        // }
     }
 }
