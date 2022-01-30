@@ -23,7 +23,7 @@ class MeeleAttack : Attack
         base.InitModule(a_CharacterController);
         spriteAnimator = a_CharacterController.GetComponentInChildren<SpriteAnimator>();
 
-        soundManager = GameObject.FindObjectOfType<SoundManager>();
+        soundManager = SoundManager.instance;
     }
 
     public override void doAttack()

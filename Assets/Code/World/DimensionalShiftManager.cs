@@ -32,7 +32,7 @@ public class DimensionalShiftManager : MonoBehaviour
 
     private void OnEnable()
     {
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = SoundManager.instance;
         worldChangeBeginEvent += soundManager.ChangeMainTheme;
     }
 

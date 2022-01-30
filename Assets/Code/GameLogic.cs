@@ -16,7 +16,7 @@ public class GameLogic : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Title"){ Application.Quit(); }
             else if (SceneManager.GetActiveScene().name == "Credits"){ SceneManager.LoadScene("Title"); }
-            else { SceneManager.LoadScene("Title"); FindObjectOfType<SoundManager>().FromGameToTitle();}
+            else { SceneManager.LoadScene("Title"); SoundManager.instance.FromGameToTitle();}
         }
     }
 }

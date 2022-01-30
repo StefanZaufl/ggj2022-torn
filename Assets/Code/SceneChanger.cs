@@ -14,7 +14,7 @@ public class SceneChanger : MonoBehaviour
     public void ChangeToLevelOne()
     {
         SceneManager.LoadScene("Level1");
-        FindObjectOfType<SoundManager>().StartMainTheme();
+        SoundManager.instance.StartMainTheme();
     }
 
 
@@ -27,14 +27,14 @@ public class SceneChanger : MonoBehaviour
     public void ChangeToWin()
     {
         SceneManager.LoadScene("Win");
-        FindObjectOfType<SoundManager>().PlayWinJingle();
+        SoundManager.instance.PlayWinJingle();
     }
 
 
     public void ChangeToLoose()
     {
         SceneManager.LoadScene("Loose");
-        FindObjectOfType<SoundManager>().PlayLooseJingle();
+        SoundManager.instance.PlayLooseJingle();
     }
 
 

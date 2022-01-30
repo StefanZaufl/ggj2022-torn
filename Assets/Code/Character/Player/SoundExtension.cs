@@ -12,7 +12,7 @@ public class SoundExtension : MonoBehaviour
 
     private void Start()
     {
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = SoundManager.instance;
         controllerCollider = GetComponentInParent<ControlledCapsuleCollider>();
     }
 

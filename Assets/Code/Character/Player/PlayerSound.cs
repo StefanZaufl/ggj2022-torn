@@ -8,7 +8,7 @@ class PlayerSound : MonoBehaviour
 
     private void Start()
     {
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = SoundManager.instance;
     }
 
     public void playFootstep()

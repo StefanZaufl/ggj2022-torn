@@ -12,7 +12,7 @@ public class HeroDamageReceiver : DamageReceiver
     {
         init(GetComponent < DeathHandler>());
 
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = SoundManager.instance;
     }
 
     public bool Stunned { get; private set; }

@@ -10,7 +10,7 @@ public class ForceApplyingDamageReceiver : DamageReceiver
     private void Start()
     {
         receiver = GetComponent<HitForceReceiver>();
-        soundManager = FindObjectOfType<SoundManager>();
+        soundManager = SoundManager.instance;
 
         init(GetComponent<DeathHandler>());
     }
