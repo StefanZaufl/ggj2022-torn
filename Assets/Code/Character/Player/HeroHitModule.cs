@@ -50,6 +50,13 @@ class HeroHitModule : GroundedControllerAbilityModule
 
     public override string GetSpriteState()
     {
-        return "Hit";
+        if(damageReceiver.Alive)
+        {
+            return "Hit";
+        }
+        else
+        {
+            return "Dead";
+        }
     }
 }
