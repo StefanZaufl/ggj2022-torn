@@ -60,6 +60,7 @@ public class SoundManager : MonoBehaviour
         //menu_theme.Play();
         actual_world_type = WorldType.LIGHT;
 
+        // you can decomment this in debugging
         if (!menu_theme.isPlaying) StartCoroutine(FadeIn(menu_theme, 2.0f));
     }
 
@@ -214,9 +215,20 @@ public class SoundManager : MonoBehaviour
     }
 
 
-    // jingles
-    public void PlayWinJingle(){ if (!jingle_win.isPlaying){ jingle_win.Play(); } }
-    public void PlayLooseJingle(){ if (!jingle_loose.isPlaying){ jingle_loose.Play(); } }
+    // jingles, ToDo fading
+    public void PlayWinJingle()
+    { 
+        if (light_theme.isPlaying) light_theme.Stop();
+        if (dark_theme.isPlaying) dark_theme.Stop();
+        if (!jingle_win.isPlaying) jingle_win.Play();
+    }
+
+    public void PlayLooseJingle()
+    { 
+        if (light_theme.isPlaying) light_theme.Stop();
+        if (dark_theme.isPlaying) dark_theme.Stop();
+        if (!jingle_loose.isPlaying) jingle_loose.Play();
+    }
 
     // simple sounds oneliner
     public void PlayJumpSound(){ if (!jump.isPlaying){ jump.Play(); } }

@@ -27,12 +27,14 @@ public class SceneChanger : MonoBehaviour
     public void ChangeToWin()
     {
         SceneManager.LoadScene("Win");
+        FindObjectOfType<SoundManager>().PlayWinJingle();
     }
 
 
     public void ChangeToLoose()
     {
         SceneManager.LoadScene("Loose");
+        FindObjectOfType<SoundManager>().PlayLooseJingle();
     }
 
 
