@@ -12,7 +12,7 @@ public class DamageReceiver : MonoBehaviour
     public float Health
     {
         get { return health; }
-        set
+        private set
         {
             if (health > 0f && value <= 0f)
             {
@@ -38,7 +38,7 @@ public class DamageReceiver : MonoBehaviour
         deathHandler = GetComponent<DeathHandler>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (invincible) return;
 
@@ -46,6 +46,7 @@ public class DamageReceiver : MonoBehaviour
 
         if(damageDealer != null && damageDealer.Damage > 0f)
         {
+            LastDamageDealer = damageDealer;
             Health -= damageDealer.Damage;
 
             if(Health > 0f && invincibleTimeAfterHit > 0f)
@@ -82,4 +83,10 @@ public class DamageReceiver : MonoBehaviour
 
         invincible = false;
     }
+
+    public bool Invincible { get { return invincible; } }
+
+    public bool Alive { get { return health > 0f; } }
+
+    public DamageDealer LastDamageDealer { get; private set; }
 }

@@ -8,6 +8,7 @@ public class HeroController : GroundedCharacterController
 
     bool isAttacking = false;
     string attackAnimationState;
+    HeroDamageReceiver damageReceiver;
 
     private void Start()
     {
@@ -15,11 +16,13 @@ public class HeroController : GroundedCharacterController
         {
             attack.InitModule(this);
         }
+
+        damageReceiver = GetComponent<HeroDamageReceiver>();
     }
 
     protected override string GetCurrentSpriteStateForDefault()
     {
-        if (isAttacking)
+        if (damageReceiver.Alive && isAttacking)
         {
             return attackAnimationState;
         }
@@ -33,7 +36,7 @@ public class HeroController : GroundedCharacterController
     {
         base.UpdateController();
 
-        if (isAttacking) return;
+        if (damageReceiver.Stunned || !damageReceiver.Alive || isAttacking) return;
 
         foreach(Attack attack in attacks)
         {

@@ -42,5 +42,21 @@ public class DimensionAwareGameObject : MonoBehaviour
         {
             collider.enabled = active;
         }
+
+        Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
+        foreach (Rigidbody rigidbody in rigidbodies)
+        {
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
+
+            if(enabled)
+            {
+                rigidbody.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+            }
+            else
+            {
+                rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            }
+        }
     }
 }
