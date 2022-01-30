@@ -12,9 +12,12 @@ public class DimensionalShiftManager : MonoBehaviour
     [SerializeField] DimensionalShiftMapping[] tileMappings;
     [SerializeField] WorldType worldType = WorldType.LIGHT;
     [SerializeField] float worldChangeDelay = 0.5f;
+    [SerializeField] bool autoChangeWorld = true;
+    [SerializeField] float autoChangeWorldInterval = 45f;
 
     Tilemap[] tilemaps;
     bool changingWorld = false;
+    float worldChangeTimer = 0f;
 
     public WorldType WorldType
     {
@@ -29,9 +32,20 @@ public class DimensionalShiftManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!changingWorld && Input.GetButtonDown(changeDimensionButtonName))
+        if(!changingWorld && Input.GetButtonDown(changeDimensionButtonName) && !autoChangeWorld)
         {
             toggleWorld();
+        }
+
+        if(autoChangeWorld)
+        {
+            worldChangeTimer += Time.deltaTime;
+
+            if(worldChangeTimer > autoChangeWorldInterval)
+            {
+                worldChangeTimer = 0f;
+                toggleWorld();
+            }
         }
     }
 
