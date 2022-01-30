@@ -18,6 +18,7 @@ public class DimensionalShiftManager : MonoBehaviour
     Tilemap[] tilemaps;
     bool changingWorld = false;
     float worldChangeTimer = 0f;
+    SoundManager soundManager;
 
     public WorldType WorldType
     {
@@ -27,6 +28,17 @@ public class DimensionalShiftManager : MonoBehaviour
     private void Start()
     {
         tilemaps = GetComponentsInChildren<Tilemap>();
+    }
+
+    private void OnEnable()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+        worldChangeBeginEvent += soundManager.ChangeMainTheme;
+    }
+
+    private void OnDisable()
+    {
+        worldChangeBeginEvent -= soundManager.ChangeMainTheme;
     }
 
     // Update is called once per frame

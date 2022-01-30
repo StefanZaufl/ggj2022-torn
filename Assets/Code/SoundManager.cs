@@ -37,9 +37,6 @@ public class SoundManager : MonoBehaviour
     // instance this manager
     public static SoundManager instance;
 
-    //  world indicator
-    private WorldType actual_world_type;
-
 
     void Awake()
     {
@@ -58,7 +55,6 @@ public class SoundManager : MonoBehaviour
     {
         // start with theme: change this later to title music
         //menu_theme.Play();
-        actual_world_type = WorldType.LIGHT;
 
         // you can decomment this in debugging
         if (!menu_theme.isPlaying) StartCoroutine(FadeIn(menu_theme, 2.0f));
@@ -79,7 +75,6 @@ public class SoundManager : MonoBehaviour
         // stop menu theme
         if (menu_theme.isPlaying) { StartCoroutine(FadeOutFadeIn(menu_theme, light_theme, 0.5f, 2.0f)); }
         else { StartCoroutine(FadeIn(light_theme, 2.0f)); }
-        actual_world_type = WorldType.LIGHT;
     }
 
 
@@ -91,9 +86,6 @@ public class SoundManager : MonoBehaviour
         // dark world / light world fade
         if (new_world_type == WorldType.DARK) { StartCoroutine(FadeBetween(light_theme, dark_theme, 5.0f)); }
         else { StartCoroutine(FadeBetween(dark_theme, light_theme, 5.0f)); }
-
-        // update world type
-        actual_world_type = new_world_type;
     }
 
 
@@ -243,38 +235,27 @@ public class SoundManager : MonoBehaviour
     public void PlayJumpSound(){ if (!jump.isPlaying){ jump.Play(); } }
     public void PlayLandingSound(){ if (!landing.isPlaying){ landing.Play(); } }
     public void PlayCharacterGetDamageSound(){ if (!character_get_damage.isPlaying){ character_get_damage.Play(); } }
-    public void PlayAttackMeleeSound(){ if (!attack_melee.isPlaying){ attack_melee.Play(); } }
-    public void PlayAttackDistanceSound(){ if (!attack_distance.isPlaying){ attack_distance.Play(); } }
+    public void PlayAttackMeleeSound(){
+        if (attack_melee.isPlaying)
+        {
+            attack_melee.Stop();
+        }
+
+        attack_melee.Play();
+    }
+    public void PlayAttackDistanceSound()
+    {
+        if (attack_distance.isPlaying)
+        {
+            attack_distance.Stop();
+        }
+
+        attack_distance.Play();
+    }
     
     // enemy
     public void PlayEnemyGetDamageSound(){ if (!enemy_get_damage.isPlaying){ enemy_get_damage.Play(); } }
     
     // npcs
     public void PlayFindRelativesSound(){ if (!find_relatives.isPlaying){ find_relatives.Play(); } }
-    
-
-
-    void Update()
-    {
-        /**
-        delete this afterwards
-        **/
-        // if (Input.GetKeyDown(KeyCode.F1))
-        // {
-        //     // toggle main theme
-        //     ChangeMainTheme(actual_world_type == WorldType.LIGHT ? WorldType.DARK : WorldType.LIGHT);
-        // }
-
-        // // walk demo
-        // if (Input.GetKey(KeyCode.F2))
-        // {
-        //     PlayWalkSound();
-        // }
-
-        // // walk demo
-        // if (Input.GetKey(KeyCode.F3))
-        // {
-        //     PlayJumpSound();
-        // }
-    }
 }
