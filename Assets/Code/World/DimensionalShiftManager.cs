@@ -5,8 +5,8 @@ using System.Collections;
 public class DimensionalShiftManager : MonoBehaviour
 {
     public delegate void WorldChangeDelegate(WorldType newWorldType);
-    public event WorldChangeDelegate worldChangeBeginEvent;
-    public event WorldChangeDelegate worldChangeEvent;
+    public static event WorldChangeDelegate worldChangeBeginEvent;
+    public static event WorldChangeDelegate worldChangedEvent;
 
     [SerializeField] string changeDimensionButtonName = "ChangeDimension";
     [SerializeField] DimensionalShiftMapping[] tileMappings;
@@ -23,14 +23,13 @@ public class DimensionalShiftManager : MonoBehaviour
 
     private void Start()
     {
-        GameObject tilemapGo = GameObject.FindGameObjectWithTag("Tilemap");
-        tilemaps = tilemapGo.GetComponentsInChildren<Tilemap>();
+        tilemaps = GetComponentsInChildren<Tilemap>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(changingWorld && Input.GetButtonDown(changeDimensionButtonName))
+        if(!changingWorld && Input.GetButtonDown(changeDimensionButtonName))
         {
             toggleWorld();
         }
@@ -54,6 +53,8 @@ public class DimensionalShiftManager : MonoBehaviour
 
     IEnumerator startSwitchinggWorld(WorldType newType)
     {
+        Debug.Log("Start Switching World...");
+
         changingWorld = true;
         worldChangeBeginEvent?.Invoke(newType);
         yield return new WaitForSeconds(worldChangeDelay);
@@ -77,7 +78,8 @@ public class DimensionalShiftManager : MonoBehaviour
 
         try
         {
-            worldChangeEvent?.Invoke(newType);
+            Debug.Log("World Changed to " + newType);
+            worldChangedEvent?.Invoke(newType);
         }
         finally
         {
