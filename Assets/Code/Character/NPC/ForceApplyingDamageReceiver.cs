@@ -5,10 +5,12 @@ using UnityEngine;
 public class ForceApplyingDamageReceiver : DamageReceiver
 {
     HitForceReceiver receiver;
+    SoundManager soundManager;
 
     private void Start()
     {
         receiver = GetComponent<HitForceReceiver>();
+        soundManager = FindObjectOfType<SoundManager>();
 
         init(GetComponent<DeathHandler>());
     }
@@ -16,5 +18,6 @@ public class ForceApplyingDamageReceiver : DamageReceiver
     protected override void onHit(Vector3 hitForceNormalized)
     {
         receiver.receiveHitForce(hitForceNormalized);
+        soundManager.PlayEnemyGetDamageSound();
     }
 }

@@ -10,6 +10,7 @@ class MeeleAttack : Attack
     [SerializeField] float attackSpawnDistance = 0.7f;
 
     SpriteAnimator spriteAnimator;
+    SoundManager soundManager;
 
     //Reset all state when this module gets initialized
     protected override void ResetState()
@@ -21,6 +22,8 @@ class MeeleAttack : Attack
     {
         base.InitModule(a_CharacterController);
         spriteAnimator = a_CharacterController.GetComponentInChildren<SpriteAnimator>();
+
+        soundManager = GameObject.FindObjectOfType<SoundManager>();
     }
 
     public override void doAttack()
@@ -33,6 +36,8 @@ class MeeleAttack : Attack
         GameObject attackObject = GameObject.Instantiate<GameObject>(attackPrefab, attackPosition, Quaternion.identity);
         DamageDealer damageDealer = attackObject.GetComponent<DamageDealer>();
         damageDealer.DamageSource = m_CharacterController.gameObject;
+
+        soundManager.PlayAttackMeleeSound();
     }
 
     protected override bool shouldAttackInternal()
