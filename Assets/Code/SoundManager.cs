@@ -65,6 +65,15 @@ public class SoundManager : MonoBehaviour
     }
 
 
+    public void FromGameToTitle()
+    {
+        if (light_theme.isPlaying) light_theme.Stop();
+        if (dark_theme.isPlaying) dark_theme.Stop();
+        if (!menu_theme.isPlaying) menu_theme.Play();
+        menu_theme.volume = 1.0f;
+    }
+
+
     public void StartMainTheme()
     {
         // stop menu theme

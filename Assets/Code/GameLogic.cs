@@ -12,10 +12,11 @@ public class GameLogic : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey("escape"))
+        if (Input.GetKeyDown("escape"))
         {
             if (SceneManager.GetActiveScene().name == "Title"){ Application.Quit(); }
-            else { SceneManager.LoadScene("Title"); }
+            else if (SceneManager.GetActiveScene().name == "Credits"){ SceneManager.LoadScene("Title"); }
+            else { SceneManager.LoadScene("Title"); FindObjectOfType<SoundManager>().FromGameToTitle();}
         }
     }
 }
