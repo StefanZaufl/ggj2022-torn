@@ -38,6 +38,13 @@ public class SceneChanger : MonoBehaviour
     }
 
 
+    public void ChangeToStory()
+    {
+        SceneManager.LoadScene("Story");
+        SoundManager.instance.StartMainTheme();
+    }
+	
+	
     public void ExitGame()
     {
         Application.Quit();
