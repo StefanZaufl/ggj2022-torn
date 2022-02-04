@@ -2,8 +2,13 @@
 
 public class Relative : MonoBehaviour
 {
+	public GameObject mf;
     private void OnTriggerEnter(Collider other)
     {
-        FindObjectOfType<SceneChanger>().ChangeToWin();
+		
+		mf = GameObject.Find("MushroomField");
+		mf.SetActive(false);
+		
+        //FindObjectOfType<SceneChanger>().ChangeToWin();
     }
 }
