@@ -1,22 +1,14 @@
 ﻿using UnityEngine;
 
-public class ToggleMushroomFieldMother : MonoBehaviour
+public class DialogAtMushrooms : MonoBehaviour
 {
 	//private GameObject mf;
     private void OnTriggerEnter(Collider other)
     {
-		try {
-			GameObject mf = GameObject.Find("MushroomField");
-			mf.SetActive(false);
-		} catch {
-			//Mushrooms already deactivated
-		}
-		//Debug.Log ("Triggered Enter");
-		
 		GameObject db = GameObject.Find("DialogueBox");
 		db.GetComponent<CanvasGroup>().alpha = 1;
 		
-		GameObject text = GameObject.Find("TextMotherMushroomSister");
+		GameObject text = GameObject.Find("TextMushroom");
 		text.GetComponent<CanvasGroup>().alpha = 1;
 		
         //FindObjectOfType<SceneChanger>().ChangeToWin();
@@ -28,7 +20,7 @@ public class ToggleMushroomFieldMother : MonoBehaviour
 		GameObject db = GameObject.Find("DialogueBox");
 		db.GetComponent<CanvasGroup>().alpha = 0;
 		
-		GameObject text = GameObject.Find("TextMotherMushroomSister");
+		GameObject text = GameObject.Find("TextMushroom");
 		text.GetComponent<CanvasGroup>().alpha = 0;
 	}
 }
