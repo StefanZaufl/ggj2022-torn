@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platform_tiles_0
+      name: platform_tiles_swamp_end
       rect:
         serializedVersion: 2
         x: 0
@@ -136,7 +136,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_1
+      name: platform_tiles_swamp
       rect:
         serializedVersion: 2
         x: 33
@@ -157,7 +157,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_2
+      name: platform_tiles_top_1
       rect:
         serializedVersion: 2
         x: 66
@@ -178,7 +178,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_3
+      name: platform_tiles_top_2
       rect:
         serializedVersion: 2
         x: 99
@@ -199,7 +199,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_4
+      name: platform_tiles_top_left
       rect:
         serializedVersion: 2
         x: 132
@@ -220,7 +220,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_5
+      name: platform_tiles_top_right
       rect:
         serializedVersion: 2
         x: 165
@@ -241,7 +241,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_6
+      name: platform_tiles_swamp_start
       rect:
         serializedVersion: 2
         x: 0
@@ -262,7 +262,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_7
+      name: platform_tiles_inner_corner
       rect:
         serializedVersion: 2
         x: 33
@@ -283,7 +283,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_8
+      name: platform_tiles_inner_1
       rect:
         serializedVersion: 2
         x: 66
@@ -304,7 +304,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_9
+      name: platform_tiles_inner_2
       rect:
         serializedVersion: 2
         x: 99
@@ -325,7 +325,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_10
+      name: platform_tiles_side_left
       rect:
         serializedVersion: 2
         x: 132
@@ -346,7 +346,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_11
+      name: platform_tiles_side_right
       rect:
         serializedVersion: 2
         x: 165
@@ -367,7 +367,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,7 +380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_12
+      name: platform_tiles_bottom_left
       rect:
         serializedVersion: 2
         x: 33
@@ -388,7 +388,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,7 +401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_13
+      name: platform_tiles_bottom
       rect:
         serializedVersion: 2
         x: 66
@@ -409,7 +409,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_14
+      name: platform_tiles_bottom_right
       rect:
         serializedVersion: 2
         x: 99
@@ -430,7 +430,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_15
+      name: platform_tiles_single_1
       rect:
         serializedVersion: 2
         x: 132
@@ -451,7 +451,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -464,7 +464,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_tiles_16
+      name: platform_tiles_single_2
       rect:
         serializedVersion: 2
         x: 165
@@ -472,7 +472,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -495,23 +495,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      platform_tiles_2: 1755683655
-      platform_tiles_3: -1734038644
-      platform_tiles_13: -1457345575
-      platform_tiles_12: 1583808465
-      platform_tiles_8: -1644625804
-      platform_tiles_11: 747086690
-      platform_tiles_0: -1514051654
-      platform_tiles_16: -1599620799
-      platform_tiles_1: 1243318940
-      platform_tiles_10: 1414895042
-      platform_tiles_4: -1424459718
-      platform_tiles_9: 134782204
-      platform_tiles_6: 670206023
-      platform_tiles_5: -35379870
-      platform_tiles_15: -1476036974
-      platform_tiles_7: 1254488901
-      platform_tiles_14: 833782996
+      platform_tiles_inner_1: -1644625804
+      platform_tiles_inner_corner: 1254488901
+      platform_tiles_single_2: -1599620799
+      platform_tiles_bottom_left: 1583808465
+      platform_tiles_top_right: -35379870
+      platform_tiles_top_2: -1734038644
+      platform_tiles_top_left: -1424459718
+      platform_tiles_top_1: 1755683655
+      platform_tiles_side_left: 1414895042
+      platform_tiles_side_right: 747086690
+      platform_tiles_bottom_right: 833782996
+      platform_tiles_swamp_start: 670206023
+      platform_tiles_inner_2: 134782204
+      platform_tiles_bottom: -1457345575
+      platform_tiles_swamp: 1243318940
+      platform_tiles_swamp_end: -1514051654
+      platform_tiles_single_1: -1476036974
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

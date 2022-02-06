@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lv_dark_0
+      name: lv_dark_water_1
       rect:
         serializedVersion: 2
         x: 66
@@ -136,7 +136,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_1
+      name: lv_dark_water_2
       rect:
         serializedVersion: 2
         x: 99
@@ -157,7 +157,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_2
+      name: lv_dark_water_3
       rect:
         serializedVersion: 2
         x: 132
@@ -178,7 +178,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_3
+      name: lv_dark_water_4
       rect:
         serializedVersion: 2
         x: 165
@@ -199,7 +199,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_4
+      name: lv_dark_swamp_end
       rect:
         serializedVersion: 2
         x: 0
@@ -220,7 +220,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_5
+      name: lv_dark_swamp
       rect:
         serializedVersion: 2
         x: 33
@@ -241,7 +241,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_6
+      name: lv_dark_top_1
       rect:
         serializedVersion: 2
         x: 66
@@ -262,7 +262,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_7
+      name: lv_dark_top_2
       rect:
         serializedVersion: 2
         x: 99
@@ -283,7 +283,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_8
+      name: lv_dark_top_left
       rect:
         serializedVersion: 2
         x: 132
@@ -304,7 +304,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_9
+      name: lv_dark_top_right
       rect:
         serializedVersion: 2
         x: 165
@@ -325,7 +325,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_10
+      name: lv_dark_inner_corner_left
       rect:
         serializedVersion: 2
         x: 0
@@ -346,7 +346,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_11
+      name: lv_dark_inner_corner_right
       rect:
         serializedVersion: 2
         x: 33
@@ -367,7 +367,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,7 +380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_12
+      name: lv_dark_inner_1
       rect:
         serializedVersion: 2
         x: 66
@@ -388,7 +388,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,7 +401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_13
+      name: lv_dark_inner_2
       rect:
         serializedVersion: 2
         x: 99
@@ -409,7 +409,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_14
+      name: lv_dark_left
       rect:
         serializedVersion: 2
         x: 132
@@ -430,7 +430,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_15
+      name: lv_dark_right
       rect:
         serializedVersion: 2
         x: 165
@@ -451,7 +451,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -464,7 +464,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_16
+      name: lv_dark_bottom_left
       rect:
         serializedVersion: 2
         x: 33
@@ -472,7 +472,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -485,7 +485,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_17
+      name: lv_dark_bottom
       rect:
         serializedVersion: 2
         x: 66
@@ -493,7 +493,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -506,7 +506,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_18
+      name: lv_dark_bottom_right
       rect:
         serializedVersion: 2
         x: 99
@@ -514,7 +514,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -527,7 +527,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_19
+      name: lv_dark_single_1
       rect:
         serializedVersion: 2
         x: 132
@@ -535,7 +535,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -548,7 +548,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv_dark_20
+      name: lv_dark_single_2
       rect:
         serializedVersion: 2
         x: 165
@@ -556,7 +556,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -579,27 +579,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lv_dark_19: -305176471
-      lv_dark_16: -315958037
-      lv_dark_3: -1007322590
-      lv_dark_2: 527874769
-      lv_dark_0: 2017445476
-      lv_dark_13: 1350821663
-      lv_dark_14: 859849247
-      lv_dark_18: 1510664176
-      lv_dark_4: -1519552666
-      lv_dark_9: 1532749257
-      lv_dark_11: 127659181
-      lv_dark_20: 819449938
-      lv_dark_12: -1603856534
-      lv_dark_10: -1361754619
-      lv_dark_1: 706406936
-      lv_dark_17: -1205690431
-      lv_dark_5: 1233046141
-      lv_dark_7: -1409664730
-      lv_dark_8: 239104817
-      lv_dark_6: 365600934
-      lv_dark_15: 2026748309
+      lv_dark_inner_1: -1603856534
+      lv_dark_swamp_end: -1519552666
+      lv_dark_swamp: 1233046141
+      lv_dark_single_1: -305176471
+      lv_dark_bottom_left: -315958037
+      lv_dark_inner_2: 1350821663
+      lv_dark_single_2: 819449938
+      lv_dark_inner_corner_left: -1361754619
+      lv_dark_water_2: 706406936
+      lv_dark_water_4: -1007322590
+      lv_dark_top_2: -1409664730
+      lv_dark_inner_corner_right: 127659181
+      lv_dark_bottom_right: 1510664176
+      lv_dark_bottom: -1205690431
+      lv_dark_water_1: 2017445476
+      lv_dark_left: 859849247
+      lv_dark_top_right: 1532749257
+      lv_dark_top_left: 239104817
+      lv_dark_water_3: 527874769
+      lv_dark_top_1: 365600934
+      lv_dark_right: 2026748309
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
