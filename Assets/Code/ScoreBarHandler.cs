@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Diagnostics;
 using System;
 using TMPro;
+using UnityEngine.UI;
 
 public class ScoreBarHandler : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class ScoreBarHandler : MonoBehaviour
 	private string healthString;
 	public static string totalTime;
 	
+	public static int score = 0;
+	
     // Start is called before the first frame update
     void Start()
     {
 		stopwatch.Start();
+		score = 0;
     }
 
     // Update is called once per frame
@@ -26,18 +30,24 @@ public class ScoreBarHandler : MonoBehaviour
 		timeString = String.Format(@"Time : {0:mm\:ss}",ts);
 		text.GetComponent<TextMeshProUGUI>().text = timeString;
 		
-		//print(timeString);
+		//set totalTime for win screen
 		totalTime = timeString;
 
 		GameObject hero = GameObject.Find("Hero");
 		float power = hero.GetComponent<DamageReceiver>().Health;
 		string powerString = power.ToString();
-		//print(powerString);
-		//healthString = String.Format("Health : ",powerString);
 		GameObject health = GameObject.Find("TextHealth");
-		health.GetComponent<TextMeshProUGUI>().text = powerString;
+		health.GetComponent<TextMeshProUGUI>().text = "Health: " + powerString;
+		
+		GameObject TextPoints = GameObject.Find("TextPoints");
+		TextPoints.GetComponent<TextMeshProUGUI>().text = "Points: " + score.ToString();		
     }
 
+	public static void AddPoints(int scorePoints)
+	{
+		score += scorePoints;
+	}
+	
 	void onDisable()
 	{
 		print(timeString);

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 class SimpleEnemyController : MonoBehaviour, DeathHandler, HitForceReceiver
 {
@@ -10,7 +11,8 @@ class SimpleEnemyController : MonoBehaviour, DeathHandler, HitForceReceiver
     [SerializeField] float maxVelocity = 2;
     [SerializeField] float hitForce = 40;
     [SerializeField] float stunnedTimer = 1f;
-
+	[SerializeField] int scoreWhenKilled = 5;
+	
     Rigidbody enemyRigidbody;
     bool stunned = false;
     Coroutine lastStunCoroutine;
@@ -50,6 +52,7 @@ class SimpleEnemyController : MonoBehaviour, DeathHandler, HitForceReceiver
         {
             Destroy(gameObject);
         }
+		ScoreBarHandler.AddPoints(scoreWhenKilled);
     }
 
     IEnumerator selfDestruct()
