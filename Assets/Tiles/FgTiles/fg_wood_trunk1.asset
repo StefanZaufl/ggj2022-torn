@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50cb281d840bdbe4f974d1f4c7f1b5c6, type: 3}
+  m_Name: fg_wood_trunk1
+  m_EditorClassIdentifier: 
+  lightTile: {fileID: 11400000, guid: 5d4016c3c1fd0291b9bf293e33004829, type: 2}
+  darkTile: {fileID: 11400000, guid: a07c704ce6deadcd18e651e23b7f4402, type: 2}
