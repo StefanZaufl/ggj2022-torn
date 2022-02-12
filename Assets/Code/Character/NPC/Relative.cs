@@ -4,6 +4,10 @@ public class Relative : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {		
-        FindObjectOfType<SceneChanger>().ChangeToWin();
+        if (other.name == "Hero") {
+			FindObjectOfType<SceneChanger>().ChangeToWin();
+		} else {
+			//print("Sister collision with not the Hero");
+		}
     }
 }
