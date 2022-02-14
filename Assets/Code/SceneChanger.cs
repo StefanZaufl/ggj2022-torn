@@ -23,7 +23,11 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
-
+    public void ChangeToHighscore()
+    {
+        SceneManager.LoadScene("Highscore");
+    }
+	
     public void ChangeToWin()
     {
         SceneManager.LoadScene("Win");

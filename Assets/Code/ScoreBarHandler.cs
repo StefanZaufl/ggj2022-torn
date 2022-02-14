@@ -11,8 +11,8 @@ public class ScoreBarHandler : MonoBehaviour
 	public Stopwatch stopwatch = new Stopwatch();
 	private string timeString;
 	private string healthString;
-	public static string totalTime;
 	
+	public static string totalTime;	
 	public static int score = 0;
 	
     // Start is called before the first frame update
@@ -31,8 +31,8 @@ public class ScoreBarHandler : MonoBehaviour
 		text.GetComponent<TextMeshProUGUI>().text = timeString;
 		
 		//set totalTime for win screen
-		totalTime = timeString;
-
+		totalTime = String.Format(@"{0:mm\:ss}",ts);
+		print("totalTime: "+ totalTime);
 		GameObject hero = GameObject.Find("Hero");
 		float power = hero.GetComponent<DamageReceiver>().Health;
 		string powerString = power.ToString();
@@ -51,14 +51,14 @@ public class ScoreBarHandler : MonoBehaviour
 	void onDisable()
 	{
 		print(timeString);
-		totalTime = timeString;
+		//totalTime = ts;
 		
 	}
 	
 	void onDestroy()
 	{
 		print(timeString);
-		totalTime = timeString;		
+		//totalTime = ts;		
 	}
 	
 }
