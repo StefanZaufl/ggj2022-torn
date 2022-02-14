@@ -153,7 +153,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.YanKnoop.DemonstrationBuildMobile
+    Android: com.DefaultCompany.Torn
     Standalone: com.DefaultCompany.Torn
     Tizen: com.Company.ProductName
     iPhone: com.Company.ProductName
@@ -678,7 +678,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: APPLICATION:DefaultTorn
+  webGLTemplate: PROJECT:DefaultTorn
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 2
