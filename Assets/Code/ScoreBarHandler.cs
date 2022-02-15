@@ -32,7 +32,7 @@ public class ScoreBarHandler : MonoBehaviour
 		
 		//set totalTime for win screen
 		totalTime = String.Format(@"{0:mm\:ss}",ts);
-		print("totalTime: "+ totalTime);
+		//print("totalTime: "+ totalTime);
 		GameObject hero = GameObject.Find("Hero");
 		float power = hero.GetComponent<DamageReceiver>().Health;
 		string powerString = power.ToString();

@@ -15,6 +15,9 @@ public class DimensionalShiftManager : MonoBehaviour
     [SerializeField] bool autoChangeWorld = true;
     [SerializeField] float autoChangeWorldInterval = 45f;
 
+	public static bool triggerChangeWorld = false;
+	//triggerChangeWorld is used i.e. by warps to set the tho DARK for battle, or to LIGHT to flee
+	
     Tilemap[] tilemaps;
     bool changingWorld = false;
     float worldChangeTimer = 0f;
@@ -51,6 +54,12 @@ public class DimensionalShiftManager : MonoBehaviour
 
         if(autoChangeWorld)
         {
+			if (triggerChangeWorld) 
+			{
+				triggerChangeWorld = false;
+				worldChangeTimer = autoChangeWorldInterval;
+			}
+			
             worldChangeTimer += Time.deltaTime;
 
             if(worldChangeTimer > autoChangeWorldInterval)
@@ -64,7 +73,7 @@ public class DimensionalShiftManager : MonoBehaviour
     public void toggleWorld()
     {
         WorldType newType;
-
+		Debug.Log("worldType " + worldType);
         if(worldType == WorldType.LIGHT)
         {
             newType = WorldType.DARK;
@@ -73,7 +82,6 @@ public class DimensionalShiftManager : MonoBehaviour
         {
             newType = WorldType.LIGHT;
         }
-
         StartCoroutine(startSwitchinggWorld(newType));
     }
 
