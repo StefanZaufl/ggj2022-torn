@@ -34,19 +34,28 @@ public class ScoreHandler : MonoBehaviour
 	
 	void setHighscore()
 	{
+		//read highscore from memory
 		int memHighscore = PlayerPrefs.GetInt("highscore", 0);
 		print("memHighscore: " + memHighscore);
-		if (ScoreBarHandler.score >= memHighscore) 
-		{	
-			PlayerPrefs.SetInt("highscore", ScoreBarHandler.score);	
-		}
-		TimeSpan tsBesttime = TimeSpan.Parse(ScoreBarHandler.totalTime);
+
+		//read besttime from memory and convert
 		string memBesttime = PlayerPrefs.GetString("besttime", "23:59");
 		print("memBesttime: " + memBesttime);
 		TimeSpan tsMemBesttime = TimeSpan.Parse(memBesttime);
+		
+		//write highscore to memory
+		if (ScoreBarHandler.score >= memHighscore) 
+		{	
+			PlayerPrefs.SetInt("highscore", ScoreBarHandler.score);
+			PlayerPrefs.SetString("highscoreTime", ScoreBarHandler.totalTime);			
+		}
+		
+		//convert and write besttime to memory
+		TimeSpan tsBesttime = TimeSpan.Parse(ScoreBarHandler.totalTime);
 		if (TimeSpan.Compare(tsBesttime,tsMemBesttime)<1)
 		{
 			PlayerPrefs.SetString("besttime", ScoreBarHandler.totalTime);
+			PlayerPrefs.SetInt("besttimeScore", ScoreBarHandler.score);
 		}
 	}
 }
