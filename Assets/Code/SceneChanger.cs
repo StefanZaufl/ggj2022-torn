@@ -48,6 +48,10 @@ public class SceneChanger : MonoBehaviour
         SoundManager.instance.StartMainTheme();
     }
 	
+	public void ChangeToLevels()
+    {
+        SceneManager.LoadScene("Levels");
+    }
 	
     public void ExitGame()
     {
