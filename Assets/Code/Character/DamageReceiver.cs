@@ -89,4 +89,11 @@ public class DamageReceiver : MonoBehaviour
     public bool Alive { get { return health > 0f; } }
 
     public DamageDealer LastDamageDealer { get; private set; }
+	
+	public static void resetHealth() 
+	{ 
+		GameObject hero = GameObject.Find("Hero");
+		hero.GetComponent<DamageReceiver>().Health = 100f;
+		//DamageReceiver.Health = 100f;
+	}
 }

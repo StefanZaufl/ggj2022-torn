@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Highscore.unity
     guid: 2e891a48855663b4ba0277e24103f33b
+  - enabled: 1
+    path: Assets/Scenes/Training.unity
+    guid: d5e4e9749274e7b4a9076f051a16525c
   m_configObjects: {}

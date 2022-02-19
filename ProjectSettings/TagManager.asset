@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tilemap
   - World
+  - Medipack
   layers:
   - Default
   - TransparentFX

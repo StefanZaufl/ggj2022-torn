@@ -137,4 +137,13 @@ public class DimensionalShiftManager : MonoBehaviour
             return go.GetComponent<DimensionalShiftManager>();
         }
     }
+	
+	public static void switchWorldToDark(){
+		WorldType newType;
+		newType = WorldType.DARK;
+		GameObject go = GameObject.FindGameObjectWithTag("World");
+		go.GetComponent<DimensionalShiftManager>().switchWorldTo(newType);
+		
+	}
+	
 }

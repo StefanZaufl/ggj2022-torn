@@ -52,6 +52,11 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Levels");
     }
+
+	public void ChangeToTraining()
+    {
+        SceneManager.LoadScene("Training");
+    }
 	
     public void ExitGame()
     {

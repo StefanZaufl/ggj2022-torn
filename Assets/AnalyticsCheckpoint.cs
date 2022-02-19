@@ -5,12 +5,14 @@ using UnityEngine.Analytics;
 
 public class AnalyticsCheckpoint : MonoBehaviour
 {
-	    private void OnTriggerEnter(Collider other)
+	private void OnTriggerEnter(Collider other)
     {
-		Analytics.CustomEvent("Checkpoint", new Dictionary<string, object>
+		string checkpointName = this.gameObject.name;
+		AnalyticsResult ar = Analytics.CustomEvent("Checkpoint", new Dictionary<string, object>
 		{
-			{ "checkpointName", this.gameObject.name }
+			{"checkpointName", checkpointName }
 		});
+		Debug.Log("AnalyticsResult = " + ar.ToString() + " with checkpointName = " + checkpointName );
 		
 		/*
 		try {
