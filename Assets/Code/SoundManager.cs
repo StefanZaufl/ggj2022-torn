@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SoundManager : MonoBehaviour
 {
@@ -53,11 +55,9 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        // start with theme: change this later to title music
-        //menu_theme.Play();
-
-        // you can decomment this in debugging
-        if (!menu_theme.isPlaying) StartCoroutine(FadeIn(menu_theme, 2.0f));
+        // start level or menu theme
+        if (SceneManager.GetActiveScene().name == "Level1") StartCoroutine(FadeIn(light_theme, 2.0f));
+        else StartCoroutine(FadeIn(menu_theme, 2.0f));
     }
 
 

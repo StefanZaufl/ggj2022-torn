@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 31
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -579,8 +579,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dark side variable assets_10: 1360345686
       dark side variable assets_13: -339271630
+      dark side variable assets_2: 548511721
       dark side variable assets_5: 1015019760
       dark side variable assets_3: -1863913853
       dark side variable assets_7: 860278958
@@ -599,7 +599,7 @@ TextureImporter:
       dark side variable assets_16: -986663797
       dark side variable assets_1: 1528847656
       dark side variable assets_4: 1578378950
-      dark side variable assets_2: 548511721
+      dark side variable assets_10: 1360345686
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

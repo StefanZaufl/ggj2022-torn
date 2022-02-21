@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 6770948864399123131}
   - component: {fileID: 624562608815552337}
   m_Layer: 0
-  m_Name: MidgroundPalette
+  m_Name: mg_palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

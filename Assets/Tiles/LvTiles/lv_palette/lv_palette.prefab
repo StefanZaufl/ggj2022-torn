@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 6447326112331037545}
   - component: {fileID: 9131912478068134889}
   m_Layer: 0
-  m_Name: LVTilePalette
+  m_Name: lv_palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
