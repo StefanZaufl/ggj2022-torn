@@ -8,6 +8,7 @@ public class SceneChanger : MonoBehaviour
     public void ChangeToTitle()
     {
         SceneManager.LoadScene("Title");
+        SoundManager.instance.FromGameToTitle();
     }
 
 

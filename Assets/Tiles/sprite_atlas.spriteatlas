@@ -36,6 +36,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 3736ed2339a7b1d47871d7f7268471c2, type: 3}
     - {fileID: 2800000, guid: a281f804608ba8279ae620ee47f8a292, type: 3}
     - {fileID: 2800000, guid: ce486a174585a600e985638a200cbd6e, type: 3}
+    - {fileID: 2800000, guid: a37fd4b87eff7a43587fa32b19987ea0, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -81,8 +82,9 @@ SpriteAtlas:
   - {fileID: -1476036974, guid: ce486a174585a600e985638a200cbd6e, type: 3}
   - {fileID: 833782996, guid: ce486a174585a600e985638a200cbd6e, type: 3}
   - {fileID: 21300000, guid: 2a3ab4b7f482dd490a1a009165981a9f, type: 3}
+  - {fileID: 21300000, guid: a37fd4b87eff7a43587fa32b19987ea0, type: 3}
   m_PackedSpriteNamesToIndex:
-  - bg_light_sheet
+  - bg_light
   - lv_dark_inner_corner_right
   - lv_dark_left
   - lv_dark_top_1
@@ -121,7 +123,8 @@ SpriteAtlas:
   - platform_tiles_single_2
   - platform_tiles_single_1
   - platform_tiles_bottom_right
-  - bg_dark_sheet
+  - bg_dark
+  - bg_stars
   m_RenderDataMap: {}
   m_Tag: sprite_atlas
   m_IsVariant: 0
