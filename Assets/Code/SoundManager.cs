@@ -39,6 +39,12 @@ public class SoundManager : MonoBehaviour
     // instance this manager
     public static SoundManager instance;
 
+     AudioSource[] sources;
+    
+    /// <summary>
+	/// whether or not it's on
+	/// </summary>
+	private bool On;
 
     void Awake()
     {
@@ -56,36 +62,77 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         // start level or menu theme
-        if (SceneManager.GetActiveScene().name == "Level1") StartCoroutine(FadeIn(light_theme, 2.0f));
-        else StartCoroutine(FadeIn(menu_theme, 2.0f));
+        if(MusicOn())
+        {
+            if (SceneManager.GetActiveScene().name == "Level1") StartCoroutine(FadeIn(light_theme, 2.0f));
+            else StartCoroutine(FadeIn(menu_theme, 2.0f));
+        }
     }
 
+    private bool MusicOn(){
+        On = (PlayerPrefsBool.HasBoolKey("Music"))?PlayerPrefsBool.GetBool("Music"):true;
+        Debug.Log("On:"+On);
+        return On;
+    }
+
+    public void ToggleMusic(){
+        if(!MusicOn())
+        {
+            //Get every single audio sources in the scene.
+            sources = GameObject.FindSceneObjectsOfType(typeof(AudioSource)) as AudioSource[]; 
+            foreach(AudioSource audioSource in sources)
+            {
+                if(audioSource.isPlaying) 
+                {
+                    Debug.Log(audioSource.name+" is playing "+audioSource.clip.name);
+                    audioSource.Stop();
+                    //FadeOut(AudioSource s1, float fade_time)
+                    //FadeOut(audioSource, 1f);
+                }
+            }
+            Debug.Log("---------------------------"); //to avoid confusion next time
+            //Debug.Break(); //pause the editor
+        }
+        else
+        {
+            Start();
+        }
+    }
 
     public void FromGameToTitle()
     {
-        if (light_theme.isPlaying) light_theme.Stop();
-        if (dark_theme.isPlaying) dark_theme.Stop();
-        if (!menu_theme.isPlaying) menu_theme.Play();
-        menu_theme.volume = 1.0f;
+        if(MusicOn())
+        {
+            if (light_theme.isPlaying) light_theme.Stop();
+            if (dark_theme.isPlaying) dark_theme.Stop();
+            if (!menu_theme.isPlaying) menu_theme.Play();
+            menu_theme.volume = 1.0f;
+        }
     }
 
 
     public void StartMainTheme()
     {
-        // stop menu theme
-        if (menu_theme.isPlaying) { StartCoroutine(FadeOutFadeIn(menu_theme, light_theme, 0.5f, 2.0f)); }
-        else { StartCoroutine(FadeIn(light_theme, 2.0f)); }
+        if(MusicOn())
+        {
+            // stop menu theme
+            if (menu_theme.isPlaying) { StartCoroutine(FadeOutFadeIn(menu_theme, light_theme, 0.5f, 2.0f)); }
+            else { StartCoroutine(FadeIn(light_theme, 2.0f)); }
+        }
     }
 
 
     public void ChangeMainTheme(WorldType new_world_type)
     {   
-        // stop menu theme
-        if (menu_theme.isPlaying) { menu_theme.Stop(); }
+        if(MusicOn())
+        {
+            // stop menu theme
+            if (menu_theme.isPlaying) { menu_theme.Stop(); }
 
-        // dark world / light world fade
-        if (new_world_type == WorldType.DARK) { StartCoroutine(FadeBetween(light_theme, dark_theme, 5.0f)); }
-        else { StartCoroutine(FadeBetween(dark_theme, light_theme, 5.0f)); }
+            // dark world / light world fade
+            if (new_world_type == WorldType.DARK) { StartCoroutine(FadeBetween(light_theme, dark_theme, 5.0f)); }
+            else { StartCoroutine(FadeBetween(dark_theme, light_theme, 5.0f)); }
+        }
     }
 
 
